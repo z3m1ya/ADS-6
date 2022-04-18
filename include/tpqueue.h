@@ -10,7 +10,7 @@ class TPQueue {
 
  public:
   void push(T item) {
-    if (n >= Size) throw "full!"
+    if (n >= Size) throw "full!";
     for (int i = n++; i >= 0; i--)
       if (i > 0 && arr[i - 1].prior >= item.prior) {
         arr[i] = arr[i - 1];
